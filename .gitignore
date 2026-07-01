@@ -1,0 +1,23 @@
+# Ignore everything by default
+*
+
+# Allow directories to be traversed
+!*/
+
+# Specifically ignore node_modules and other large/build folders to avoid search overhead
+node_modules/
+dist/
+build/
+.git/
+
+# Allow specific root files
+!.gitignore
+!README.md
+!readme.md
+!.env
+!package.json
+!package-lock.json
+
+# Allow .gitkeep inside backend and frontend to track them as empty folders
+!backend/.gitkeep
+!frontend/.gitkeep
