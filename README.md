@@ -119,7 +119,7 @@ Generates summarized business reports suitable for executive review and decision
 | Database | PostgreSQL, Supabase |
 | Machine Learning | Python |
 | Charts | Chart.js |
-| Authentication |
+| Authentication | JWT |
 | Deployment | AWS, Vercel |
 
 ---
