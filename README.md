@@ -158,31 +158,145 @@ The frontend communicates with the backend through REST APIs. Business services 
 ---
 
 ## Project Structure
-
+```text
+.
+|-- .env
+|-- .gitignore
+|-- PROJECT_REPORT.md
+|-- README.md
+|-- backend
+|   |-- .env
+|   |-- .env.example
+|   |-- .gitignore
+|   |-- package-lock.json
+|   |-- package.json
+|   |-- readme.md
+|   |-- server.js
+|   |-- src
+|   |   |-- app.js
+|   |   |-- config
+|   |   |   |-- db.js
+|   |   |   |-- initDb.js
+|   |   |-- controllers
+|   |   |   |-- analytics.controller.js
+|   |   |   |-- audit.controller.js
+|   |   |   |-- auth.controller.js
+|   |   |   |-- compliance.controller.js
+|   |   |   |-- fund.controller.js
+|   |   |   |-- investment.controller.js
+|   |   |   |-- investor.controller.js
+|   |   |   |-- settings.controller.js
+|   |   |   |-- sip.controller.js
+|   |   |   |-- systemUser.controller.js
+|   |   |   |-- transaction.controller.js
+|   |   |-- middleware
+|   |   |   |-- auth.middleware.js
+|   |   |-- ml
+|   |   |   |-- churn_model.pkl
+|   |   |   |-- churn_predictor.py
+|   |   |   |-- settingsStore.js
+|   |   |   |-- train_model.py
+|   |   |-- repositories
+|   |   |   |-- audit.repository.js
+|   |   |   |-- compliance.repository.js
+|   |   |   |-- fund.repository.js
+|   |   |   |-- investment.repository.js
+|   |   |   |-- notification.repository.js
+|   |   |   |-- sip.repository.js
+|   |   |   |-- systemUser.repository.js
+|   |   |   |-- transaction.repository.js
+|   |   |   |-- user.repository.js
+|   |   |-- routes
+|   |   |   |-- ai.routes.js
+|   |   |   |-- analytics.routes.js
+|   |   |   |-- audit.routes.js
+|   |   |   |-- auth.routes.js
+|   |   |   |-- compliance.routes.js
+|   |   |   |-- fund.routes.js
+|   |   |   |-- index.js
+|   |   |   |-- investment.routes.js
+|   |   |   |-- investor.routes.js
+|   |   |   |-- settings.routes.js
+|   |   |   |-- sip.routes.js
+|   |   |   |-- transaction.routes.js
+|   |   |   |-- user.routes.js
+|   |   |-- services
+|   |   |   |-- analytics.service.js
+|   |   |   |-- audit.service.js
+|   |   |   |-- auth.service.js
+|   |   |   |-- compliance.service.js
+|   |   |   |-- fund.service.js
+|   |   |   |-- generator.js
+|   |   |   |-- investment.service.js
+|   |   |   |-- investor.service.js
+|   |   |   |-- settings.service.js
+|   |   |   |-- sip.service.js
+|   |   |   |-- systemUser.service.js
+|   |   |   |-- transaction.service.js
+|   |   |-- utils
+|   |   |   |-- asyncHandler.js
+|   |   |   |-- auditLogger.js
+|   |   |   |-- idGenerator.js
+|   |   |   |-- randomForest.js
+|-- frontend
+|   |-- .oxlintrc.json
+|   |-- dist
+|   |   |-- assets
+|   |   |   |-- index-BzPJ5r8C.js
+|   |   |   |-- index-YsflkVKX.css
+|   |   |   |-- india_map-Bjjr3fol.jpg
+|   |   |-- favicon.svg
+|   |   |-- icons.svg
+|   |   |-- index.html
+|   |   |-- logo.jpg
+|   |-- index.html
+|   |-- package-lock.json
+|   |-- package.json
+|   |-- public
+|   |   |-- favicon.svg
+|   |   |-- icons.svg
+|   |   |-- logo.jpg
+|   |-- src
+|   |   |-- App.css
+|   |   |-- App.jsx
+|   |   |-- ExecutiveDashboard.jsx
+|   |   |-- assets
+|   |   |   |-- fintrend_logo.jpg
+|   |   |   |-- hero.png
+|   |   |   |-- india_map.jpg
+|   |   |   |-- react.svg
+|   |   |   |-- vite.svg
+|   |   |-- chartSetup.js
+|   |   |-- components
+|   |   |   |-- AIAllocationAdvisor.jsx
+|   |   |   |-- AMLDashboard.jsx
+|   |   |   |-- AUMDashboard.jsx
+|   |   |   |-- Auth.jsx
+|   |   |   |-- ChurnPrediction.jsx
+|   |   |   |-- ComplianceAlert.jsx
+|   |   |   |-- ExecutiveDashboard.jsx
+|   |   |   |-- FundManagerNotes.jsx
+|   |   |   |-- PerformanceBenchmarking.jsx
+|   |   |   |-- ReportGenerator.jsx
+|   |   |   |-- SIPTrendAnalysis.jsx
+|   |   |   |-- TransactionHeatmap.jsx
+|   |   |-- constants
+|   |   |   |-- funds.js
+|   |   |   |-- navigation.js
+|   |   |-- context
+|   |   |   |-- PlatformContext.jsx
+|   |   |-- index.css
+|   |   |-- main.jsx
+|   |   |-- services
+|   |   |   |-- api
+|   |   |   |   |-- client.js
+|   |   |   |   |-- index.js
+|   |   |-- useChartTheme.js
+|   |-- vite.config.js
+|-- package-lock.json
+|-- package.json
 ```
-backend/
-│
-├── config/
-├── controllers/
-├── middleware/
-├── repositories/
-├── routes/
-├── services/
-├── ml/
-└── utils/
 
-frontend/
-│
-├── assets/
-├── components/
-├── constants/
-├── context/
-├── services/
-└── App.jsx
-
-supabase/
-└── schema.sql
-```
 
 The backend follows a layered architecture consisting of controllers, services, repositories, and utility modules. This separation improves maintainability and allows individual components to evolve independently.
 
