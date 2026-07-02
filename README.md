@@ -116,7 +116,7 @@ Generates summarized business reports suitable for executive review and decision
 |--------|------------|
 | Frontend | React.js, Vite |
 | Backend | Node.js, Express.js |
-| Database | PostgreSQL, Supabase |
+| Database | PostgreSQL, SQLite |
 | Machine Learning | Python |
 | Charts | Chart.js |
 | Authentication | JWT |
@@ -148,8 +148,8 @@ Generates summarized business reports suitable for executive review and decision
       │                │               │
 
  Repositories      Services      ML Models
-
-                 PostgreSQL
+                      |
+             PostgreSQL / SQLite 
 
 ```
 
