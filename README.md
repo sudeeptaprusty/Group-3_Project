@@ -417,7 +417,7 @@ npm start
 
 ## Team
 
-Developed by **Group 3** as part of a FinTech Analytics Platform focused on intelligent investment management, regulatory compliance, and predictive analytics.
+Developed by **Group 3** as part of a FinTrend Analytics Platform focused on intelligent investment management, regulatory compliance, and predictive analytics.
 
 ---
 
