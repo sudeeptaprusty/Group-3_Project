@@ -1,0 +1,45 @@
+export const PAGE_TITLES = {
+  home: 'FinTech Analysis Dashboard',
+  aum: 'Scheme AUM Cockpit',
+  sip: 'SIP Analytics Monitor',
+  heatmap: 'Transaction Heatmap',
+  churn: 'Churn Prediction Engine',
+  performance: 'Performance Reports',
+  investors: 'Investor Reports',
+  funds: 'Mutual Fund Schemes',
+  transactions: 'Transaction Ledger',
+  compliance: 'Compliance Oversight Portal',
+  risk: 'Risk & Liquidity Monitor',
+  kyc: 'KYC Management',
+  reports: 'Regulatory & Custom Reports',
+  alerts: 'Alerts & Notifications',
+  users: 'User Directory',
+  audit: 'Audit Logs',
+  settings: 'Data & System Management',
+  register_investor: 'Register Investor',
+  dashboard: 'AMC Dashboard',
+};
+
+export const PAGE_SUBTITLES = {
+  home: 'Real-time business performance and key executive metrics.',
+  aum: 'Live mutual fund asset under management and inflow/outflow trends.',
+  sip: 'Operational collections velocity, bounce ratios, and mandate schedules.',
+  heatmap: 'Daily mutual fund buy/sell volumes mapped across calendar days.',
+  churn: 'Machine learning analytics forecasting investor redemption risk.',
+  performance: 'Fund returns comparison, benchmarks, and portfolio growth ratios.',
+  investors: 'Folio distribution, demographic share, and retail/institutional splits.',
+  funds: 'Mutual fund schemes directory, prices, and historical nav levels.',
+  transactions: 'Real-time transactional audit trail showing mutual fund unit allocations.',
+  compliance: 'Monitor system threat ratings, resolve AML flags, and authorize overrides.',
+  risk: 'Real-time asset concentration limits, drawdown stress-testing, and VaR ratios.',
+  kyc: 'Verify investor documents, check compliance status, and manage folios.',
+  reports: 'Generate, verify, and export regulatory reporting packages.',
+  alerts: 'System alerts, critical threshold exceptions, and user notifications.',
+  users: 'System staff profiles, authorization levels, and access credentials.',
+  audit: 'WORM immutable system event ledger and security access logs.',
+  settings: 'Global configurations, AI threshold overrides, and sandbox controls.',
+  register_investor: 'Create new investor folios and initialize regulatory onboarding.',
+};
+
+export const getPageTitle = (activeTab) => PAGE_TITLES[activeTab] || PAGE_TITLES.home;
+export const getPageSubtitle = (activeTab) => PAGE_SUBTITLES[activeTab] || 'Overview of business performance and key metrics';
