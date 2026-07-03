@@ -120,7 +120,7 @@ Generates summarized business reports suitable for executive review and decision
 | Machine Learning | Python |
 | Charts | Chart.js |
 | Authentication | JWT |
-| Deployment | AWS, Vercel |
+| Deployment | AWS|
 
 ---
 
